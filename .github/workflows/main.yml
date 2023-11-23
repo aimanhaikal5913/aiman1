@@ -1,12 +1,11 @@
-name: workfloww1
+name: workflow1
 on: 
   push:
     branches:
       - main
-jobs: 
+jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
       - name: first step
-        run: enho "hello world"
-      
+        run: echo "hello from job1"
