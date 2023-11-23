@@ -1,0 +1,9 @@
+name: workfloww1
+on: push
+jobs: 
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: first step
+        run: enho "hello world"
+      
