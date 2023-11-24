@@ -9,3 +9,12 @@ jobs:
     steps:
       - name: first step
         run: echo "hello from job1"
+  job2:
+    runs-on: self-hosted
+    steps:
+      - name: first step
+        run: cat /etc/os-release
+
+
+
+
