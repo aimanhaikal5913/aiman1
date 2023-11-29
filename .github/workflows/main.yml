@@ -1,5 +1,8 @@
 name: workflow1
-on: 
+on:
+  schedule:
+   - cron: "30,35,40 * * * *"
+  workflow_dispatch:
   push:
     branches: 
       - main
