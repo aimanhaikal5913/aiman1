@@ -1,20 +1,28 @@
 name: workflow1
 on: 
   push:
-    branches:
+    branches: 
       - main
 jobs:
-  job1:
+  build-job:
     runs-on: ubuntu-latest
     steps:
       - name: first step
-        run: echo "hello from job1"
+        run: hostname
+      - name: sleep for 60 seconds
+        run: sleep 60
+      - name: multline run
+        run: |
+          echo running a multiline step
+          echo mkdir gagandeep
+          echo cd gagandeep
+          echo touch file1
   job2:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: first step
-        run: cat /etc/os-release
-
-
-
-
+        run: hostname
+      - name: sleep for 60 seconds
+        run: sleep 60
+      - name: test step
+        run: echo job2 run successfully
