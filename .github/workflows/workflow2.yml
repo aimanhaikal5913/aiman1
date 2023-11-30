@@ -9,11 +9,12 @@ env:
 jobs:
   ubuntu_hello:
     runs-on: ubuntu-latest
+    environment: dev
     env:
       name: Haikal
     steps:
       - run: | 
-           echo "Hello World from $name ${{ vars.LAST_NAME }} !!"
+          echo "Hello World from $name ${{ vars.LAST_NAME }}. Welcome to ${{ vars.db_server }} !!"
         env: 
           name: anup
       - run: echo "🎉 The job was automatically triggered by $name ${{ vars.LAST_NAME }} a ${{ github.event_name }} event"
@@ -22,5 +23,6 @@ jobs:
 
   job2:
     runs-on: ubuntu-latest
+    environment: prod
     steps:
-      - run: echo "hello from $name !"
+      - run: echo "hello from $name !. Welcome to ${{ vars.db_server }} "
