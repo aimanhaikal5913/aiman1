@@ -27,5 +27,5 @@ jobs:
     environment: prod
     steps:
       - run: |
-          echo "hello from $name !. Welcome to ${{ vars.db_server }} "
+          echo "hello from $name !. Welcome to ${{ vars.db_server }}"
           echo "Repo Password is ${{ secrets.repo_passwd }} and DB passwd is ${{ secrets.db_passwd }}
