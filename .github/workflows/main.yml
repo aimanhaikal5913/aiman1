@@ -26,10 +26,10 @@ jobs:
         uses: docker/setup-buildx-action@v2
       - name: Build and push
         run: |
-          docker build -t -vv aimanhaikal5913/intel:maven .
+          docker build -t aiman5913/intel:maven .
           docker images
-          docker login --username aimanhaikal5913 --password ${{ secrets.DOCKER_PASS }}
-          docker push aimanhaikal5913/intel:maven
+          docker login --username aiman5913 --password ${{ secrets.DOCKER_PASS }}
+          docker push aiman5913/intel:maven
 
   test:
     runs-on: ubuntu-latest
